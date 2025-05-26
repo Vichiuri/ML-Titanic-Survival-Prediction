@@ -43,12 +43,21 @@ print("Prediction for sample passenger:", model.predict(sample))
 
 
 
-#survival by sex visualization using seaborn and matplotlib
+#survival count plot visualization using seaborn and matplotlib
 
 sns.countplot(x='survived', data=df)
 plt.title('Survival Count')
 plt.xticks([0, 1], ['Not Survived', 'Survived'])
 plt.show()
+
+
+#survival by sex visualization using seaborn and matplotlib
+
+sns.countplot(x='sex', hue='survived', data=df)
+plt.title('Survival by Sex')
+plt.legend(labels=['Not Survived', 'Survived'])
+plt.show()
+
 
 
 
