@@ -60,4 +60,13 @@ plt.show()
 
 
 
+#Age Distribution (Histogram) visualization
+sns.histplot(data=df, x='age', kde=True, bins=30)
+plt.title('Age Distribution')
+plt.show()
+
+
+
+
+
 
