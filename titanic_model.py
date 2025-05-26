@@ -66,6 +66,14 @@ plt.title('Age Distribution')
 plt.show()
 
 
+# Box Plot of Fare by Survival
+
+sns.boxplot(x='survived', y='fare', data=df)
+plt.title('Fare Distribution by Survival')
+plt.xticks([0, 1], ['Not Survived', 'Survived'])
+plt.show()
+
+
 
 
 
