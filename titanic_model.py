@@ -1,5 +1,6 @@
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
@@ -36,3 +37,18 @@ print("Classification Report:\n", classification_report(y_test, y_pred))
 # Example prediction
 sample = [[1, 25, 70, 1, 0, 0]]
 print("Prediction for sample passenger:", model.predict(sample))
+
+
+
+
+
+
+#survival by sex visualization using seaborn and matplotlib
+
+sns.countplot(x='survived', data=df)
+plt.title('Survival Count')
+plt.xticks([0, 1], ['Not Survived', 'Survived'])
+plt.show()
+
+
+
