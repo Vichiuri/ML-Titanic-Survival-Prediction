@@ -74,6 +74,16 @@ plt.xticks([0, 1], ['Not Survived', 'Survived'])
 plt.show()
 
 
+#Heatmap of Correlation
+
+
+corr = df.corr(numeric_only=True)
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.title('Feature Correlation Heatmap')
+plt.show()
+
+
+
 
 
 
