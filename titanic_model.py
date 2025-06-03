@@ -85,7 +85,10 @@ plt.show()
 
 
 
-
+corr =df.corr(numeric_only=True)
+sns.heatmap(corr, annot=True, cmap='coolwarm')  
+plt.title('feature correlation heatmap  ')
+plt.show()
 
 
 
