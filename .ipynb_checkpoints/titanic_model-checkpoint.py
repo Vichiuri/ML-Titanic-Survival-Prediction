@@ -11,7 +11,7 @@ df = sns.load_dataset('titanic')
 # Drop irrelevant columns and rows with missing data
 df = df.drop(['deck', 'embark_town', 'alive', 'class', 'who', 'adult_male'], axis=1)
 df = df.dropna()
-
+ 
 # Convert categorical columns to numeric
 df['sex'] = df['sex'].map({'male': 0, 'female': 1})
 df['embarked'] = df['embarked'].map({'S': 0, 'C': 1, 'Q': 2})
@@ -19,7 +19,7 @@ df['embarked'] = df['embarked'].map({'S': 0, 'C': 1, 'Q': 2})
 # Features and target
 X = df[['sex', 'age', 'fare', 'embarked', 'sibsp', 'parch']]
 y = df['survived']
-
+v
 # Train/test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
